@@ -1,0 +1,15 @@
+Version free:
+
+- Calculadora de la masa corporal
+  - Automaticamente se almacenara en el almacenamiento local
+  - Ofrecer la posibilidad de almacenar esa informacion en la nube para 
+    un mejor futuro seguimiento.
+
+- No se que comer?
+  -Funcionalidad para que el usuario pueda ingresar
+
+Version Paga:
+
+- Guardar Los datos de sus avances en la nube (Parse o Backend Personal)
+- 
+
