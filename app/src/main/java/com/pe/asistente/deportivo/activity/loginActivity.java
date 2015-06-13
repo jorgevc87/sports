@@ -135,6 +135,8 @@ public class loginActivity extends ActionBarActivity {
         if (accessToken != null && perfil != null) {
             startActivity(new Intent(loginActivity.this, MainActivity.class));
             loginActivity.this.finish();
+        }else {
+
         }
     }
 }
