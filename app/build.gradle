@@ -28,4 +28,5 @@ dependencies {
     compile project(':ViewPagerIndicator')
     compile 'com.facebook.android:facebook-android-sdk:4.0.0'
     compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.github.alamkanak:android-week-view:1.2.3'
 }

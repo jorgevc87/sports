@@ -24,6 +24,7 @@ import com.pe.asistente.deportivo.R;
 import com.pe.asistente.deportivo.adapter.DrawerLayoutAdapter;
 import com.pe.asistente.deportivo.beans.DrawerLayoutItem;
 import com.pe.asistente.deportivo.fragment.FragmentCalcInidiceMasaCorporal;
+import com.pe.asistente.deportivo.fragment.FragmentProgramacionEntrenamiento;
 import com.pe.asistente.deportivo.fragment.FragmentSalirCorrer;
 import com.squareup.picasso.Picasso;
 
@@ -76,6 +77,7 @@ public class MainActivity extends ActionBarActivity {
         items.add(new DrawerLayoutItem(R.mipmap.ic_launcher, getResources().getString(R.string.salir_correr), true));
         items.add(new DrawerLayoutItem(R.mipmap.ic_launcher, getResources().getString(R.string.calorias_consumidas), false));
         items.add(new DrawerLayoutItem(R.mipmap.ic_launcher, getResources().getString(R.string.mi_masa_muscular), false));
+        items.add(new DrawerLayoutItem(R.mipmap.ic_launcher, getResources().getString(R.string.miProgramaEntrenamiento), false));
         items.add(new DrawerLayoutItem(R.mipmap.ic_launcher, getResources().getString(R.string.compartir_aplicacion), false));
 
         final DrawerLayoutAdapter adapter = new DrawerLayoutAdapter(MainActivity.this, items);
@@ -99,7 +101,7 @@ public class MainActivity extends ActionBarActivity {
 
                 switch (position) {
                     case 0:
-                        contentFragment= FragmentSalirCorrer.newInstance(null);
+                        contentFragment = FragmentSalirCorrer.newInstance(null);
                         break;
                     case 1:
                         break;
@@ -107,7 +109,7 @@ public class MainActivity extends ActionBarActivity {
                         contentFragment = FragmentCalcInidiceMasaCorporal.newInstance(null);
                         break;
                     case 3:
-
+                        contentFragment = FragmentProgramacionEntrenamiento.newInstance(null);
                         break;
                 }
 
