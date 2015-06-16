@@ -10,6 +10,9 @@
     <string name="peso">Peso</string>
     <string name="calcular_imc">Calcular IMC</string>
     <string name="mi_estadistica_imc">Mis Estadisticas</string>
+    <string name="strAceptar">Aceptar</string>
+    <string name="strCancelar">Cancelar</string>
+
 
     <!--OPCIONES DEL DRAWERLAYOUT-->
     <string name="salir_correr">Salir a correr</string>

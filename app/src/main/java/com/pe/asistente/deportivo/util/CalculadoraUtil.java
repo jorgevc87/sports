@@ -6,12 +6,6 @@ package com.pe.asistente.deportivo.util;
 public class CalculadoraUtil {
 
     public static double calcularIndiceMasaCorporal(double estatura, double peso) {
-        double imc = 0;
-
-        imc = peso / (Math.pow(estatura, 2));
-
-        return imc;
+        return peso / (Math.pow(estatura, 2));
     }
-
-
 }

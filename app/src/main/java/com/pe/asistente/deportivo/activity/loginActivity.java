@@ -30,6 +30,7 @@ import com.facebook.login.widget.LoginButton;
 import com.pe.asistente.deportivo.R;
 import com.pe.asistente.deportivo.adapter.LoginPagerAdapter;
 import com.pe.asistente.deportivo.fragment.LoginFragmentPage;
+import com.pe.asistente.deportivo.util.HashCodeUtil;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import org.json.JSONObject;
@@ -83,14 +84,13 @@ public class loginActivity extends ActionBarActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.e(LOG_TAG, "onSuccess");
-                ActualizarUI();/*ESTA LINEA SOLO SE EJECUTARA LA PRIMERA VEZ QUE SE LOGUEE EL USUARIO*/
 
                 GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                     @Override
                     public void onCompleted(JSONObject jsonObject, GraphResponse graphResponse) {
-                        Toast.makeText(loginActivity.this, "Resultado JSON: " + jsonObject, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(loginActivity.this, "Resultado JSON: " + jsonObject, Toast.LENGTH_LONG).show();
                         //Log.e(LOG_TAG, "Resultado: " + jsonObject);
-                        ActualizarUI();
+                        startActivity(new Intent(loginActivity.this, MainActivity.class));
                     }
                 });
 

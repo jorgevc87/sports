@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.pe.asistente.deportivo.R;
+import com.pe.asistente.deportivo.fragment.Dialog.CustomDialog;
 import com.pe.asistente.deportivo.util.CalculadoraUtil;
 
 /**
@@ -20,6 +21,7 @@ public class FragmentCalcInidiceMasaCorporal extends Fragment {
 
     private View v;
     private Button btnCalculaImc;
+    private Button btnStadisticas;
 
     private EditText edtEstatura;
     private EditText edtPeso;
@@ -47,11 +49,21 @@ public class FragmentCalcInidiceMasaCorporal extends Fragment {
         edtPeso = (EditText) v.findViewById(R.id.edtPeso);
         txtImc = (TextView) v.findViewById(R.id.txtImc);
         btnCalculaImc = (Button) v.findViewById(R.id.btnCalculaImc);
+        btnStadisticas = (Button) v.findViewById(R.id.btnStadisticas);
 
         btnCalculaImc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 txtImc.setText(String.valueOf(Math.round(CalculadoraUtil.calcularIndiceMasaCorporal(Double.parseDouble(edtEstatura.getText().toString()), Double.parseDouble(edtPeso.getText().toString())))));
+            }
+        });
+
+        btnStadisticas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CustomDialog d= new CustomDialog();
+
+                d.show(getActivity().getSupportFragmentManager(), "Titulo de mi Dialog");
             }
         });
     }
