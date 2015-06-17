@@ -1,5 +1,6 @@
 package com.pe.asistente.deportivo.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.widget.Chronometer;
 import android.widget.TextView;
 
 import com.pe.asistente.deportivo.R;
+import com.pe.asistente.deportivo.service.Cronometro;
 
 /**
  * Created by JorgeLuis on 13/06/2015.
@@ -51,7 +53,7 @@ public class FragmentSalirCorrer extends Fragment {
         btnStartCronometro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cronometro.start();
+                getActivity().startService(new Intent(getActivity(), Cronometro.class));
             }
         });
         btnPauseCronometro.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +71,7 @@ public class FragmentSalirCorrer extends Fragment {
         btnStopCronometro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cronometro.stop();
+                getActivity().stopService(new Intent(getActivity(), Cronometro.class));
             }
         });
     }

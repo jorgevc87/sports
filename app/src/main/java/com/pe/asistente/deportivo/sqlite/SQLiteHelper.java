@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class SQLiteHelper extends SQLiteOpenHelper {
 
-    private String strCreateTableEstadisticaIMC = "CREATE TABLE IF NOT EXISTS imc_estadistica (id INTEGER PRIMARY KEY AUTOINCREMENT, peso TEXT, estatura TEXT, imc TEXT, fecha TEXT)";
+    private String strCreateTableEstadisticaIMC = "CREATE TABLE IF NOT EXISTS imc_estadistica (id INTEGER PRIMARY KEY AUTOINCREMENT, peso TEXT, estatura TEXT, imc TEXT, fecha TEXT, url_foto TEXT)";
 
     public SQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
